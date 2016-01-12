@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+/*
+Write a program that uses a structure named MovieData to store the following information
+about a movie:
+Title
+Director
+Year Released
+Running time (in minutes)
+Include a constructor that allows all four of these member data values to be specified at the
+time a MovieData variable is created. The program should create two MovieData variables
+and pass each one in turn to a function that displays the information about the movie in a
+clearly formatted manner.
+*/
+using namespace std;
+
+struct MovieData
+{
+	string title, director;
+	int year, time;
+
+	MovieData(string t, string d, int y, int t2)
+	{
+		title = t, 
+		director = d, 
+		year = y, 
+		time = t2;
+	}
+};
+
+void displayMovie(MovieData &md)
+{ 
+	string title, 
+		director;
+	int year, time;
+
+	cout << "Title        : " << md.title << endl;
+	cout << "Director     : " << md.director << endl;
+	cout << "Year Released: " << md.year << endl;
+	cout << "Running time : " << md.time << endl;
+}
+
+int main()
+{
+	MovieData movie1("The Hangover", "Todd Phillips", 2009, 100),
+		movie2("Inception", "Stephen Spielberg", 2010, 148);
+
+	displayMovie(movie1);
+	displayMovie(movie2);
+	
+	system("pause");
+	return 0;
+}
