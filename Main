@@ -1,7 +1,21 @@
 #include <iostream>
 #include "account.h"
 using namespace std;
+/*
+Write a class that simulates a bank account. Customers can deposit and withdraw funds. If sufficient funds are not available for withdrawal, a $10 overdraft penalty is charged.
 
+Then create an instance, customer name is Tom and initial balance is 200. He tries to withdraw 150 at the first time, then to withdraw 100, but the balance is not enough, so he failed to withdraw money and had to pay for 10 penalty. A day later, he deposited 100 to his account. 
+
+Using header files and implementation files format talked about in the lecture, you can find the example codes in the course content "examples from class". 
+
+Format requirements:
+
+                1.  You should put the class in the header file(account.h).
+
+                2.  You should implement the class functions in the source file(account.cpp).
+
+                3.  You should write your test codes in another file(main.cpp).
+*/
 void printAccountbalance(double balance);
 int main() {
 
