@@ -1,0 +1,36 @@
+#include <iostream>
+#include "account.h"
+using namespace std;
+
+void printAccountbalance(double balance);
+int main() {
+
+Account Account;
+Account.deposit(200);
+
+printAccountbalance(Account.getbalance());
+Account.withdraw(150);
+
+printAccountbalance(Account.getbalance());
+Account.withdraw(100);
+
+printAccountbalance(Account.getbalance());
+Account.deposit(100);
+
+printAccountbalance(Account.getbalance());
+
+
+
+
+system("pause");
+return 0;
+
+
+
+}
+
+void printAccountbalance(double balance) {
+
+cout << "Account balance is: " << balance << endl;
+
+}
